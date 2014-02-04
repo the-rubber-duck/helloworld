@@ -22,6 +22,14 @@ public class App {
         int LawNewNumber = App.sub(newNumber, sum);
         System.out.println("6 - 3 = " + LawNewNumber);
     }
+    
+    public static int multiply(int x, int y){
+        return x * y;
+    }
+    
+    public static int square(int x){
+        return x * x;
+    }
 
     public static int add(int x, int y) {
         return x + y;
