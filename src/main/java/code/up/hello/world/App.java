@@ -1,26 +1,31 @@
 package code.up.hello.world;
 
+import code.up.hello.world.entertainment.Entertainment;
+import code.up.hello.world.entertainment.Genre;
+import code.up.hello.world.entertainment.Movies;
+
 /**
  * Hello world!
  *
  */
 public class App {
 
-    private static String Panda = "Cutie";
-
-    private static int One = 1;
-    private static int Two = 2;
-
     public static void main(String[] args) {
-        int sum = add(One, Two);
-        System.out.println("Hello World!");
-        System.out.println("Sum is " + sum);
-        int newNumber = App.add(sum, sum);
-        System.out.println("Sum is " + newNumber);
-        int LawNumber = sub(One, Two);
-        System.out.println("1 - 2 = " + LawNumber);
-        int LawNewNumber = App.sub(newNumber, sum);
-        System.out.println("6 - 3 = " + LawNewNumber);
+        Entertainment titanic = new Movies(184, Genre.ROMANCE, "Titanic");
+        // titanic.setCinemaRelease("11th November 1999");
+        movieData(titanic);
+        
+        Movies lionKing = new Movies(90, Genre.DOCUMENTARY, "Lion King");
+        movieData(lionKing);
+    }
+    
+    public static void movieData(Entertainment film){
+        System.out.println("Entertainment!!!!");
+        System.out.println("Name: " + film.getName());
+        System.out.println("Length: " + film.getLength());
+        System.out.println("Genre: " + film.getGenre());
+        //System.out.println("Cinema Release Date: " + film.getCinemaRelease());
+        
     }
     
     public static int multiply(int x, int y){
